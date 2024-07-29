@@ -1,0 +1,61 @@
+{
+    "name": "",
+    "homePage": "",
+    "repos": {
+        "https://github.com/nf-core/modules.git": {
+            "modules": {
+                "nf-core": {
+                    "fastqc": {
+                        "branch": "master",
+                        "git_sha": "46eca555142d6e597729fcb682adcc791796f514",
+                        "installed_by": [
+                            "modules"
+                        ]
+                    },
+                    "gunzip": {
+                        "branch": "master",
+                        "git_sha": "4e5f4687318f24ba944a13609d3ea6ebd890737d",
+                        "installed_by": [
+                            "modules"
+                        ]
+                    },
+                    "hisat2/align": {
+                        "branch": "master",
+                        "git_sha": "2c6b1144ed58b6184ad58fc4e6b6a90219b4bf4f",
+                        "installed_by": [
+                            "modules"
+                        ]
+                    },
+                    "hisat2/build": {
+                        "branch": "master",
+                        "git_sha": "2c6b1144ed58b6184ad58fc4e6b6a90219b4bf4f",
+                        "installed_by": [
+                            "modules"
+                        ]
+                    },
+                    "hisat2/extractsplicesites": {
+                        "branch": "master",
+                        "git_sha": "2c6b1144ed58b6184ad58fc4e6b6a90219b4bf4f",
+                        "installed_by": [
+                            "modules"
+                        ]
+                    },
+                    "salmon/index": {
+                        "branch": "master",
+                        "git_sha": "cb6b2b94fc40dea58f0b1e3dd095f3dd24f2ac8a",
+                        "installed_by": [
+                            "modules"
+                        ]
+                    },
+                    "salmon/quant": {
+                        "branch": "master",
+                        "git_sha": "727232afb8294b53dd9d05bfe469b70cce1675bb",
+                        "installed_by": [
+                            "modules"
+                        ]
+                    }
+                }
+            }
+        }
+    }
+}
