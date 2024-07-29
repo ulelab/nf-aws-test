@@ -10,7 +10,8 @@ include { HISAT2_BUILD              } from './modules/nf-core/hisat2/build'
 include { HISAT2_EXTRACTSPLICESITES } from './modules/nf-core/hisat2/extractSpliceSites'
 include { SALMON_INDEX              } from './modules/nf-core/salmon/index'
 include { SALMON_QUANT              } from './modules/nf-core/salmon/quant'
-include { GUNZIP as GUNZIP_GTF      } from './modules/nf-core/gunzip/main'  
+include { GUNZIP as GUNZIP_GTF      } from './modules/nf-core/gunzip/main' 
+include { UNTAR  as UNTAR_INDEX     } from './modules/nf-core/untar/main'
 
 def create_fastq_channel(LinkedHashMap row) {
     // create meta map
@@ -58,10 +59,14 @@ workflow {
         ch_gtf
     )
 
+    if (params.hisat2_index.endsWith('.tar.gz')) {
+        ch_hisat2_index = UNTAR_INDEX ( ch_hisat2_index ).untar.first()
+    }
+
     HISAT2_ALIGN (
         ch_fastq,
         ch_hisat2_index,
-        HISAT2_EXTRACTSPLICESITES.out.txt
+        HISAT2_EXTRACTSPLICESITES.out.txt.first()
     )
 
     SALMON_INDEX (
