@@ -17,3 +17,5 @@ Strandedness can be: forward, reverse, unstranded.
 Fastq_2 is left empty for single end experiments.
 
 Pipeline runs FastQC, Hisat2 and Salmon.
+
+[Guide for running on AWS Batch](https://staphb.org/resources/2020-04-29-nextflow_batch.html)
